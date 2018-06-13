@@ -38,33 +38,33 @@ build:
     - cassandra -v  
     - /var/lib/neo4j/bin/neo4j version
  
- - name: pipelineu16nodall_runCI
-   type: runCI
-   steps:
-    - IN: pipelineu16nodall_ciRepo
-    - IN: servicesCIu16all_runCI
+- name: pipelineu16nodall_runCI
+  type: runCI
+  steps:
+   - IN: pipelineu16nodall_ciRepo
+   - IN: servicesCIu16all_runCI
     
- - name: pipelineu16javall_runCI
-   type: runCI
-   steps:
-    - IN: pipelineu16javall_ciRepo
-    - IN: servicesCIu16all_runCI
+- name: pipelineu16javall_runCI
+  type: runCI
+  steps:
+   - IN: pipelineu16javall_ciRepo
+   - IN: servicesCIu16all_runCI
     
- - name: pipelineu16cppall_runCI
-   type: runCI
-   steps:
-    - IN: pipelineu16cppall_ciRepo
-    - IN: servicesCIu16all_runCI
+- name: pipelineu16cppall_runCI
+  type: runCI
+  steps:
+   - IN: pipelineu16cppall_ciRepo
+   - IN: servicesCIu16all_runCI
   
- - name: pipelineu16php_runCI
-   type: runCI
-   steps:
-    - IN: pipelineu16php_ciRepo
-    - IN: servicesCIu16all_runCI
+- name: pipelineu16php_runCI
+  type: runCI
+  steps:
+   - IN: pipelineu16php_ciRepo
+   - IN: servicesCIu16all_runCI
    
- - name: pipelineu16pytall_runCI
-   type: runCI
-   steps:
-    - IN: pipelineu16pytall_ciRepo
-    - IN: servicesCIu16all_runCI
+- name: pipelineu16pytall_runCI
+  type: runCI
+  steps:
+   - IN: pipelineu16pytall_ciRepo
+   - IN: servicesCIu16all_runCI
 
