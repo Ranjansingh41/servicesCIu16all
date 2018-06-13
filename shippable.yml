@@ -1,0 +1,39 @@
+language: none
+   
+services:
+  - cassandra 
+  - couchdb 
+  - elasticsearch 
+  - memcached 
+  - mongodb 
+  - mysql 
+  - neo4j 
+  - postgres 
+  - rabbitmq 
+  - redis  
+  - riak 
+  - selenium 
+  - sqlite 
+  
+build:
+  pre_ci_boot:
+    image_name: drydock/c7all
+    image_tag: master
+    pull: true
+    
+  ci:
+    - psql --version
+    - java -jar /usr/local/selenium/selenium-server-standalone-3.11.0.jar --version
+    - sqlite3 --version
+    - mysql --version
+    - elasticsearch --version
+    - memcached --version
+    - riak version
+    - sudo -i -u couchdb /opt/couchdb/bin/couchdb 2>&1 >/dev/null &
+    - sleep 5
+    - curl http://127.0.0.1:5984/
+    - dpkg -s rabbitmq-server | grep  Version
+    - redis-server --version
+    - mongod --version
+    - cassandra -v  
+    - /var/lib/neo4j/bin/neo4j version
