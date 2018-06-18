@@ -22,7 +22,7 @@ build:
    pull: true
 
 build:
-   ci:
+  ci:
     - psql --version
     - java -jar /usr/local/selenium/selenium-server-standalone-3.11.0.jar --version
     - sqlite3 --version
