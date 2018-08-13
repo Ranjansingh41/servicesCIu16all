@@ -23,7 +23,7 @@ build:
   
  ci:
    - psql --version
-   - java -jar /usr/local/selenium/selenium-server-standalone-3.13.0.jar --version
+   - java -jar /usr/local/selenium/selenium-server-standalone-3.14.0.jar --version
    - sqlite3 --version
    - mysql --version
    - elasticsearch --version
