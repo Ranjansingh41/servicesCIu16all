@@ -42,7 +42,8 @@ build:
    - echo $JAVA_HOME
    - printenv
    - echo $PATH
-   - /var/lib/neo4j/bin/neo4j version
+   - cp neo4j_env.sh /usr/local/bin/shippable_services/neo4j_env.sh
+   - shippable_service neo4j start
    - java -version
       
  
