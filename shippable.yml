@@ -41,8 +41,8 @@ build:
    #- cassandra -v 
    - echo $JAVA_HOME
    - printenv
+   - echo $PATH
    - /var/lib/neo4j/bin/neo4j version
-   - pip show pycrypto 
    - java -version
       
  
