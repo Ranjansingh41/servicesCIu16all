@@ -7,7 +7,7 @@ services:
   - memcached 
   - mongodb 
   - mysql 
-  #- neo4j 
+  - neo4j 
   - postgres 
   - rabbitmq 
   - redis  
@@ -36,7 +36,7 @@ build:
    - redis-server --version
    - mongod --version
    #- cassandra -v  
-   #- /var/lib/neo4j/bin/neo4j version
+   - /var/lib/neo4j/bin/neo4j version
    - pip show pycrypto 
    - java -version
       
