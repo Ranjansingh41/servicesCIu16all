@@ -7,7 +7,7 @@ services:
   - memcached 
   - mongodb 
   - mysql 
-  - neo4j 
+  #- neo4j 
   - postgres 
   - rabbitmq 
   - redis  
