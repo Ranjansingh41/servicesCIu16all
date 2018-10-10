@@ -16,10 +16,12 @@ services:
   #- sqlite 
   
 build:
+ pre_ci:
+   - docker build -t=drydock/ranjubaba:balleballe .
  pre_ci_boot:
-   image_name: drydock/u16all
-   image_tag: master
-   pull: true
+   image_name: drydock/ranjubaba
+   image_tag: balleballe
+   pull: false
   
  ci:
    - java --version
