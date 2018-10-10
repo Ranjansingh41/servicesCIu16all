@@ -36,7 +36,7 @@ build:
    - redis-server --version
    - mongod --version
    #- cassandra -v 
-   - echo $JAVA HOME
+   - echo $JAVA_HOME
    - /var/lib/neo4j/bin/neo4j version
    - pip show pycrypto 
    - java -version
