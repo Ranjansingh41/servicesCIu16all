@@ -15,10 +15,11 @@ language: none
    - selenium 
    - sqlite 
 
- pre_ci_boot:
-   image_name: drydock/u16all
-   image_tag: master
-   pull: true
+build:
+  pre_ci_boot:
+    image_name: drydock/u16all
+    image_tag: master
+    pull: true
   
  ci:
    - java --version
