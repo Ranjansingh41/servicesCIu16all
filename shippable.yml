@@ -1,48 +1,40 @@
 language: none
-   
+
 services:
-  #- cassandra 
-  - couchdb 
-  - elasticsearch 
-  - memcached 
-  - mongodb 
-  - mysql 
-  #- neo4j 
-  - postgres 
-  - rabbitmq 
-  - redis  
-  - riak 
-  - selenium 
-  - sqlite 
+  - mysql
+  - selenium
+  - postgres
+  - redis
+  - rabbitmq
+  - mongodb
+  - memcached
+  - riak
+  - elasticsearch
+  - couchdb
+
+
 
 build:
-  pre_ci_boot:
-    image_name: drydock/u16all
-    image_tag: master
-    pull: true
-  
+
+ pre_ci_boot:
+   image_name: drydock/u16all
+   image_tag: master
+   pull: true
+
+
  ci:
    - java --version
-   - psql --version
-   - java -jar /usr/local/selenium/selenium-server-standalone-3.14.0.jar --version
-   - sqlite3 --version
    - mysql --version
-   - elasticsearch --version
+   - sqlite3 --version
+   - psql --version
+   - redis-server --version
+   - dpkg -s rabbitmq-server | grep Version
+   - mongod --version
    - memcached --version
    - riak version
-   - sudo -i -u couchdb /opt/couchdb/bin/couchdb 2>&1 >/dev/null &
+   - elasticsearch --version
    - sleep 5
-   - curl http://127.0.0.1:5984/
-   - dpkg -s rabbitmq-server | grep  Version
-   - redis-server --version
-   - mongod --version
-   #- cassandra -v 
-   #- echo $JAVA_HOME
-   #- printenv
-   #- echo $PATH
-   #- cp neo4j.sh /usr/local/bin/shippable_services/neo4j.sh
-   #- shippable_service neo4j start
-   
-      
- 
+   - curl http://127.0.0.1:5984
+   - cassandra -v
+   - pip show pycrypto
 
