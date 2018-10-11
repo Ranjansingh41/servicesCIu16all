@@ -1,19 +1,19 @@
 language: none
    
-services:
-  #- cassandra 
-  - couchdb 
-  - elasticsearch 
-  - memcached 
-  - mongodb 
-  - mysql 
-  #- neo4j 
-  - postgres 
-  - rabbitmq 
-  - redis  
-  - riak 
-  - selenium 
-  - sqlite 
+ services:
+   #- cassandra 
+   - couchdb 
+   - elasticsearch 
+   - memcached 
+   - mongodb 
+   - mysql 
+   #- neo4j 
+   - postgres 
+   - rabbitmq 
+   - redis  
+   - riak 
+   - selenium 
+   - sqlite 
 
  pre_ci_boot:
    image_name: drydock/u16all
