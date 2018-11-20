@@ -11,8 +11,8 @@ services:
   - riak
   - elasticsearch
   - couchdb
-  - cassandra
-  - neo4j
+  #- cassandra
+  #- neo4j
 
 
 
