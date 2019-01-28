@@ -20,7 +20,7 @@ build:
 
  pre_ci_boot:
    image_name: drydock/u16all
-   image_tag: v6.12.4
+   image_tag: v6.7.4
    pull: true
 
 
