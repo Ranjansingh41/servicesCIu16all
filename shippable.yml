@@ -24,10 +24,6 @@ services:
 
 build:
 
- pre_ci_boot:
-   image_name: drydock/u16golall
-   image_tag: v6.12.4
-   pull: true
 
 
  ci:
