@@ -4,7 +4,7 @@ language: go
  # nodePool: u16
   
 go:
-  - 1.10.5
+  - 1.10.3
 
 services:
   - mysql
