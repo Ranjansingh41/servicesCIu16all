@@ -20,7 +20,7 @@ build:
 
  pre_ci_boot:
    image_name: drydock/u16all
-   image_tag: master
+   image_tag: v6.12.4
    pull: true
 
 
@@ -39,5 +39,5 @@ build:
    - curl http://127.0.0.1:5984
    - cassandra -v
    - pip show pycrypto
-   - java -jar /usr/local/selenium/selenium-server-standalone-3.141.59.jar --version
+   #- java -jar /usr/local/selenium/selenium-server-standalone-3.141.59.jar --version
 
