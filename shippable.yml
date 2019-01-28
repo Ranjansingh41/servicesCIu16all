@@ -1,7 +1,7 @@
 language: go
 
-runtime:
-  nodePool: u16
+#runtime:
+ # nodePool: u16
   
 go:
   - 1.10.3
