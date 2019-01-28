@@ -27,6 +27,7 @@ build:
 
 
  ci:
+   - docker images
    #- mysql -e "CREATE USER redacted@localhost IDENTIFIED BY 'redacted';"
    - mysql -e "CREATE USER classifier@localhost IDENTIFIED BY 'foobar';"
    #- java --version
