@@ -1,9 +1,10 @@
-language: none
+language: go
 
 #runtime:
  # nodePool: u16
   
-## - 1.10.3
+go:
+  - 1.10.3
 
 services:
   - mysql
