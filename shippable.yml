@@ -1,48 +1,41 @@
-language: go
+language: none
 
-#runtime:
- # nodePool: u16
-  
-go:
-  - 1.10.3
 
 services:
   - mysql
-  #- selenium
-  #- postgres
-  #- redis
-  #- rabbitmq
-  #- mongodb
-  #- memcached
-  #- riak
-  #- elasticsearch
-  #- couchdb
-  #- cassandra
+  - sqlite
+  - postgres
+  - redis
   #- neo4j
+  - rabbitmq
+  - mongodb
+  - memcached
+  - riak
+  - elasticsearch
+  - couchdb
+  - selenium
 
-
-
+    
 build:
-
-
+ pre_ci_boot:
+   image_name: drydock/u16all
+   image_tag: master
+   pull: true
 
  ci:
-   - docker images
-   #- mysql -e "CREATE USER redacted@localhost IDENTIFIED BY 'redacted';"
-   - mysql -e "CREATE USER classifier@localhost IDENTIFIED BY 'foobar';"
-   #- java --version
    - mysql --version
-   #- sqlite3 --version
-   #- psql --version
-   #- redis-server --version
-   #- dpkg -s rabbitmq-server | grep Version
-   #- mongod --version
-   #- memcached --version
-   #- riak version
-   #- elasticsearch --version
-   #- sleep 5
-   #- curl http://127.0.0.1:5984
-   #- cassandra -v
-   #- pip show pycrypto
-   #- java -jar /usr/local/selenium/selenium-server-standalone-3.141.59.jar --version
-
+   - java -jar /usr/local/selenium/selenium-server-standalone-3.141.59.jar --version
+   - java -version
+   - printenv
+   - sqlite3 --version
+   - psql --version
+   - redis-server --version
+   - dpkg -s rabbitmq-server | grep Version
+   - mongod --version
+   - memcached --version
+   - riak version
+   - elasticsearch --version
+   - sleep 5
+   - curl http://127.0.0.1:5984
+   - cassandra -v
+   - pip show pycrypto
