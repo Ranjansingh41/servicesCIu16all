@@ -3,7 +3,7 @@ language: none
 
 services:
   - mysql
-  - sqlite
+ # - sqlite
   - postgres
   - redis
   #- neo4j
